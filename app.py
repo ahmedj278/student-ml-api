@@ -7,11 +7,12 @@ VERSION = "1.0.0"
 
 @app.route("/health", methods=["GET"])
 def health():
-    return jsonify({
-        "status": "healthy",
-        "application": "student-ml-api",
-        "version": VERSION
-    })
+   return jsonify({
+    "status": "healthy",
+    "application": "student-ml-api",
+    "application_version": "1.1.0",
+    "model_version": "model-1"
+})
 
 
 @app.route("/predict", methods=["POST"])
